@@ -1,0 +1,25 @@
+{
+	"Error Mapping Pattern": {
+	  "prefix": "errMap",
+	  "body": [
+		"const errorStatusMap = {",
+		"    ${1:ERRORNAME}: {",
+		"        status: ${2:0},",
+		"        message: `",
+		"        ${3:Message here},",
+		"        Error: \\${err.message}`",
+		"    }",
+		"};",
+		"",
+		"result.status = errorStatusMap[err.message].status || 500;",
+		"result.success = false;",
+		"result.message = errorStatusMap[err.message].message || `",
+		"Internal server error in ${4:name}Controller, ${5:func} func:",
+		"Error: \\${err}`;",
+		"",
+		"console.error(result.message);",
+		"$0"
+	  ],
+	  "description": "Error mapping pattern with status codes and messages"
+	}
+  }
