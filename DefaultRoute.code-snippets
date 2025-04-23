@@ -1,0 +1,19 @@
+{
+	"Default Express Router": {
+	  "prefix": "expRoute",
+	  "body": [
+		"import e from \"express\";",
+		"import checkAccessLevel from \"../../midddlewares/accessLevelMiddleware.js\";",
+		"import {${1:NOME_DO_MODULO_BACK}, ${2:NOME_DO_MODULO_FRONT}} from \"../../controllers/${3:MODULO}\";",
+		"",
+		"const r = e.Router();",
+		"",
+		"r.post('/api/${4:NOME_DA_ROTA_BACK}', ${1:NOME_DO_MODULO_BACK});",
+		"r.get('/${5:NOME_DA_ROTA_FRONT}', ${2:NOME_DO_MODULO_FRONT});",
+		"",
+		"export default r;",
+		"$0"
+	  ],
+	  "description": "Express router template with back and front endpoints"
+	}
+  }
