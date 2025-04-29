@@ -3,7 +3,7 @@
 	  "prefix": "expRoute",
 	  "body": [
 		"import e from \"express\";",
-		"import checkAccessLevel from \"../../middlewares/accessLevelMiddleware.js\";",
+		"import { checkToken } from \"../../middlewares/auth/jwtHandler.js\";",
 		"import {${1:NOME_DO_MODULO_BACK}, ${2:NOME_DO_MODULO_FRONT}} from \"../../controllers/${3:MODULO}\";",
 		"",
 		"const r = e.Router();",

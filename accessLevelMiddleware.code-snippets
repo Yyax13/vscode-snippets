@@ -1,6 +1,6 @@
 {
 	"accessLevelMiddleware":{
-		"prefix": "accesslevel",
+		"prefix": "chAccessLevel",
 		"body": [
       "import genResult from \"../results\";",
       "import redirectToStatusPage from \"./httpStatusMiddleware\";",
