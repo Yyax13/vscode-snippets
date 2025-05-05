@@ -29,13 +29,12 @@
 		"result.message = errorInfo.message,",
 		"result.status = errorInfo.status,",
 		"result.success = false",
-		"};",
 		"",
 		"const stackLine = err.stack.split('\\\\n')[1].trim();",
     	"const errorLine = stackLine.match(/\\(?(.+):(\\\\d+):(\\\\d+)\\)?/)[0];",
     	"console.error(`\\${err.name}: \\${err.message} \\${errorLine}`);",
 		"",
-		"return result;"
+		"return result"
 	],
 	  "description": "Error mapping pattern with status codes and messages"
 	}
