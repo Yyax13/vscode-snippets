@@ -1,0 +1,9 @@
+{
+	"Or in JS or TS": {
+	  "prefix": "jstsOr",
+	  "body": [
+		"|"
+	],
+	  "description": "just | for my international keyboard but i use abnt2"
+	}
+  }
