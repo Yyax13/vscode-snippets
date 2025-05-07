@@ -3,17 +3,22 @@
 	  "prefix": "expRoute",
 	  "body": [
 		"import e from \"express\";",
-		"import { checkToken } from \"../../middlewares/auth/jwtHandler.js\";",
-		"import {${1:NOME_DO_MODULO_BACK}, ${2:NOME_DO_MODULO_FRONT}} from \"../../controllers/${3:MODULO}\";",
+		"import setRateLimit from \"../middlewares/rateLimitMiddleware.js\";",
+		"import { redirectToStatusPage } from \"../middlewares/httpStatusMiddleware.js\";",
+		"import checkTokenAccessLevel from \"../middlewares/auth/tokenAccessLevel.js\";",
+		"import { newToken, checkToken, checkTokenAndReturn } from \"../middlewares/auth/jwtHandler.js\";",
+		"import checkAccessLevel from \"../middlewares/auth/cookieChecker.js\";",
+		"import checkIfIsAEmployee from \"../middlewares/auth/checkEmployee.js\";",
+		"",
+		"// Modules here",
 		"",
 		"const r = e.Router();",
 		"",
-		"r.post('/api/${4:NOME_DA_ROTA_BACK}', ${1:NOME_DO_MODULO_BACK});",
-		"r.get('/${5:NOME_DA_ROTA_FRONT}', ${2:NOME_DO_MODULO_FRONT});",
+		"// Routes here",
 		"",
-		"export default r;",
-		"$0"
+		"export default r;"
 	  ],
-	  "description": "Express router template with back and front endpoints"
+	  "description": "Express router with predefined middleware imports and base structure"
 	}
   }
+  
