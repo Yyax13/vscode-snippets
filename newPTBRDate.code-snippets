@@ -1,0 +1,9 @@
+{
+	"new pt-BR date": {
+	  "prefix": "ptbrDate",
+	  "body": [
+		"const myNewDate = new Date(decoded.exp * 1000).toLocaleString('pt-BR', {timeZone: 'America/Sao_Paulo'});"
+	],
+	  "description": "just a date in pt-BR format"
+	}
+  }
